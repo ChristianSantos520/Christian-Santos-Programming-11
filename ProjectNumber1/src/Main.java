@@ -64,9 +64,8 @@ public class Main {
                 //This variable will determine the length is the current substring.
                 int probeLength = (probeEnd - probeBeginning + 1);
 
-                /*If the current substring is the greater that the last substring that was detected,
-                longestBeginning and longestSize will be assigned by the probe variables because probeLength is the
-                longer substring.
+                /*If the current substring is the greater that the last substring that was detected.  The longest
+                variables will be assigned to the probe variables because probe length is the longer substring.
                 */
                 if(probeLength > longestSize){
                     longestBeginning = probeBeginning;
