@@ -9,7 +9,7 @@ public class Main {
         for (int i = 0; i < s.length(); i++){
 
             //This for loop will go through all of the vowels to see if s.substring is a vowel.
-            //This for loop is runn every position in the s string.
+            //This for loop will run for every position in the s string.
             for (int j = 0; j < vowels.length; j++){
                 if (s.substring(i,i+1).equals(vowels[j])){
                     answer++;
@@ -43,10 +43,10 @@ public class Main {
         //The position where the longest substring begins.
         int longestBeginning = 0;
 
-        //This variable tell you how long the longest substring is.
+        //This variable tell you the size of the longest substring is.
         int longestSize = 0;
 
-        //This is the beginning of the current substring.
+        //This is the beginning position of the current substring.
         int probeBeginning = 0;
 
         //This is the end of the current substring position
@@ -54,9 +54,8 @@ public class Main {
 
         for(int i = 0; i < s.length(); i++){
 
-            /*If the character at position 'i' is greater or equal to the end of the of the current substring, the
-            current position for the end of substring is equal to 'i'.  This will check if the substring will continue.
-            If the if statement is false, the substring substring will end.
+            /*If the character at position 'i' is greater or equal to probeEnd, the probeEnd will equal to 'i'.
+            This will check if the substring will continue.
             */
             if(s.charAt(i) >= s.charAt(probeEnd)){
                 probeEnd = i;
@@ -65,8 +64,9 @@ public class Main {
                 //This variable will determine the length is the current substring.
                 int probeLength = (probeEnd - probeBeginning + 1);
 
-                /*If the current substring is the greater that the last substring that was detected.  The longest
-                variables will be assiged by the probe variable because probe length is the longer substring.
+                /*If the current substring is the greater that the last substring that was detected,
+                longestBeginning and longestSize will be assigned by the probe variables because probeLength is the
+                longer substring.
                 */
                 if(probeLength > longestSize){
                     longestBeginning = probeBeginning;
