@@ -85,6 +85,7 @@ public class Main {
         }
 
         s = s.substring(longestBeginning, longestBeginning + longestSize);
+        System.out.println("Longest substring in alphabetical order is: " + s);
         return s;
     }
     public static void main(String[] args) {
