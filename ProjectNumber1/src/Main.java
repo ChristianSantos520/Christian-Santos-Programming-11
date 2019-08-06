@@ -43,10 +43,10 @@ public class Main {
         //The position where the longest substring begins.
         int longestBeginning = 0;
 
-        //This variable tell you the size of the longest substring is.
+        //This variable tell you the size of the longest substring.
         int longestSize = 0;
 
-        //This is the beginning position of the current substring.
+        //This is the beginning position of the current substring being probed.
         int probeBeginning = 0;
 
         //This is the end of the current substring position
@@ -54,28 +54,31 @@ public class Main {
 
         for(int i = 0; i < s.length(); i++){
 
-            /*If the character at position 'i' is greater or equal to probeEnd, the probeEnd will equal to 'i'.
-            This will check if the substring will continue.
+            /*If the character at position 'i' is greater or equal to the character at probeEnd,
+              probeEnd will be set to 'i'.  This will check if the substring will continue.
             */
             if(s.charAt(i) >= s.charAt(probeEnd)){
                 probeEnd = i;
 
             } else {
-                //This variable will determine the length is the current substring.
+                //The else statment will start a new substring to detect.
+                //This variable will determine the length of the current substring.
                 int probeLength = (probeEnd - probeBeginning + 1);
 
-                /*If the current substring is the greater that the last substring that was detected.  The longest
+                /*Check if the current substring is longer than longestSize.  The longest
                 variables will be assigned to the probe variables because probe length is the longer substring.
                 */
                 if(probeLength > longestSize){
                     longestBeginning = probeBeginning;
                     longestSize = probeLength;
                 }
-
+                
+                //'i' will be assigned to the probe variables because it is starting a new substring.
                 probeBeginning = i;
                 probeEnd = i;
             }
         }
+        
         //This will insure if the substring at the end of the s is the longest substring.
         int probeLength = (probeEnd - probeBeginning + 1);
         if(probeLength > longestSize){
