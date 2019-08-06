@@ -61,7 +61,7 @@ public class Main {
                 probeEnd = i;
 
             } else {
-                //The else statment will start a new substring to detect.
+                //The else statement will start a new substring to detect.
                 //This variable will determine the length of the current substring.
                 int probeLength = (probeEnd - probeBeginning + 1);
 
