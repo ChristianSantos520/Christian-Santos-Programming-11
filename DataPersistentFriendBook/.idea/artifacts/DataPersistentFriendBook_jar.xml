@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DataPersistentFriendBook:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DataPersistentFriendBook_jar</output-path>
+    <root id="archive" name="DataPersistentFriendBook.jar">
+      <element id="module-output" name="DataPersistentFriendBook" />
+    </root>
+  </artifact>
+</component>
