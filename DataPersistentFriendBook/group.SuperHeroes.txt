@@ -1,0 +1,2 @@
+Superman,55,red and blue
+Wonder Woman,231,yellow
